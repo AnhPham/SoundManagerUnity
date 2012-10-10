@@ -1,0 +1,1 @@
+{"HIDARI_TEST":"Sounds/HIDARI_TEST","MIGI_TEST":"Sounds/MIGI_TEST"}
