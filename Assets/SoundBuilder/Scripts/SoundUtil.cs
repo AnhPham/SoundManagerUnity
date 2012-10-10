@@ -96,7 +96,9 @@ public class SoundUtil : MonoBehaviour {
 		
 		if (Debug.isDebugBuild) Debug.Log("----------------------Unload sound: " + sceneName + "----------------------");
 		foreach (KeyValuePair<string, FreqAudioClip> pair in _sounds) {
-			pair.Value.UnloadAll();
+			if (pair.Value != null && pair.Value.enabled && pair.Value.gameObject != null && !pair.Value.isDestroyed) {
+				pair.Value.UnloadAll();
+			}
 		}
 	}
 	

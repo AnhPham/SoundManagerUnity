@@ -46,6 +46,7 @@ public class FreqAudioClip : MonoBehaviour
 	/// The freq.
 	/// </value>
 	public UsedFrequent Freq { get { return freq; } }
+	public bool isDestroyed;
 	
 	/// <summary>
 	/// Creates the Game Object, add this script to it as 1 component.
@@ -167,6 +168,7 @@ public class FreqAudioClip : MonoBehaviour
 	private void OnDestroy()
 	{
 		UnloadAll();
+		isDestroyed = true;
 	}
 	
 	/// <summary>
